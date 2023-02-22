@@ -1,0 +1,21 @@
+﻿Console.WriteLine("Main Method Started......");
+
+ SomeMethod();
+
+Console.WriteLine("Main Method End");
+Console.ReadKey();
+
+Console.WriteLine("Hello, World!");
+
+ async static void SomeMethod()
+{
+    Console.WriteLine("Some Method Started......");
+    await Wait();
+    Console.WriteLine("Some Method End");
+}
+
+ static async Task Wait()
+{
+    await Task.Delay(TimeSpan.FromSeconds(10));
+    Console.WriteLine("\n10 Seconds wait Completed\n");
+}
